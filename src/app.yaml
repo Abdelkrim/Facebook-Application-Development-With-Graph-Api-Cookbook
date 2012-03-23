@@ -1,0 +1,8 @@
+application: alt-f1-social-graph
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /.*
+  script: helloworld.py
