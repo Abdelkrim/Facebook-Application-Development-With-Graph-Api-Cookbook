@@ -3,7 +3,8 @@
 		<title>ALT-F1 Social Graph</title>
 	</head>
 	<body>
-		{% include "javascriptsdk.html" %} <h1>Login via Facebook </h1>
+		<div id="fb-root"></div>
+		{% include "javascriptsdk.js" %} <h1>Login via Facebook </h1>
 		<div class="fb-login-button" scope="{{ FB_LOGIN_SCOPE }}" data-show-faces="true" data-width="200" data-max-rows="1">
 			Login with Facebook
 		</div>
@@ -16,8 +17,13 @@
 		scrolling="no" frameborder="0"
 		style="border:none; width:450px; height:80px"></iframe>
 		<h1>Activity feed</h1>
-		<div class="fb-activity" data-ref="homepage" data-site="{{ SITE }}" data-app-id="{{ FB_APP_ID }}" data-width="300" data-height="300" data-header="true" data-recommendations="true"></div>
+		<div class="fb-activity" data-ref="homepage" data-site="{{ SITE }}" data-app-id="{{ FB_APP_ID }}" data-width="300" data-height="300" data-header="true" data-recommendations="false"></div>
 		<h1>Recommendations</h1>
 		<div class="fb-recommendations" data-ref="homepage" data-site="{{ SITE }}" data-app-id="{{ FB_APP_ID }}" data-width="300" data-height="300" data-header="true"></div>
+		<h1>User data</h1>
+		<div align="center">
+			<img id="image"/>
+			<div id="name"></div>
+		</div>
 	</body>
 </html>

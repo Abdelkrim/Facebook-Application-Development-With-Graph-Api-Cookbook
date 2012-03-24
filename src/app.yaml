@@ -1,5 +1,5 @@
 application: alt-f1-social-graph
-version: 1
+version: 1-0-dev
 runtime: python
 api_version: 1
 
@@ -8,5 +8,26 @@ handlers:
   static_files: static/images/favicon.ico
   upload: static/images/favicon\.ico
 
+
+- url: /privacy\.html
+  static_files: static/f/privacy.html
+  upload: static/f/privacy.html
+  
+- url: /fb_user-info\.html
+  static_files: static/f/fb_user-info.html
+  upload: static/f/fb_user-info.html
+  
+- url: /fb_fb-ui\.html
+  static_files: static/f/fb_fb-ui.html
+  upload: static/f/fb_fb-ui.html
+
+- url: /fb_get_username_pic\.html
+  static_files: static/f/fb_get_username_pic.html
+  upload: static/f/fb_get_username_pic.html
+    
+- url: /fb_afterregistration\.html
+  static_files: static/f/fb_afterregistration.html
+  upload: static/f/fb_afterregistration.html
+  
 - url: /.*
   script: main.py
