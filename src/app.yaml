@@ -8,7 +8,10 @@ handlers:
   static_files: static/images/favicon.ico
   upload: static/images/favicon\.ico
 
-
+- url: /fb_canvas_fluid\.html
+  static_files: static/f/fb_canvas_fluid.html
+  upload: static/f/fb_canvas_fluid.html
+  
 - url: /privacy\.html
   static_files: static/f/privacy.html
   upload: static/f/privacy.html

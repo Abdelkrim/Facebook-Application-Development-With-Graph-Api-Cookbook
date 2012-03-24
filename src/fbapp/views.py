@@ -24,6 +24,12 @@ class MainPage(webapp.RequestHandler):
 
 class AfterRegistration(webapp.RequestHandler):
     def get(self):
-        template_values = {}
+        template_values = {'FB_APP_ID' : FB_APP_ID }
         path = os.path.join(os.path.dirname(__file__), '..', 'templates', 'afterregistration.html')
+        self.response.out.write(template.render(path, template_values))
+
+class FBCanvasFluid(webapp.RequestHandler):
+    def get(self):
+        template_values = {'FB_APP_ID' : FB_APP_ID }
+        path = os.path.join(os.path.dirname(__file__), '..', 'templates', 'fb_canvas_fluid.html')
         self.response.out.write(template.render(path, template_values))
